@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.springcore.DI.B" id="B">
+        <property name="y" value="100"/>
+    </bean>
+
+    <bean class="com.springcore.DI.B" id="BB">
+        <property name="y" value="500"/>
+    </bean>
+
+    <bean class="com.springcore.DI.A" id="A">
+        <property name="x" value="10"/>
+        <property name="ob" ref="B"/>
+    </bean>
+
+    <bean class="com.springcore.DI.A" id="AA">
+        <property name="x" value="50"/>
+        <property name="ob">
+            <ref bean="BB"/>
+        </property>
+    </bean>
+
+    <bean class="com.springcore.DI.A" id="AAA" name="aaa" p:x="300" p:ob-ref="BB"/>
+
+</beans>

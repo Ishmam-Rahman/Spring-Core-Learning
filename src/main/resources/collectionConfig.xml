@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.springcore.collections.Students" id="studentsList">
+        <property name="names">
+            <list>
+                <value>Ishmam</value>
+                <value>Oyshi</value>
+                <value>Taushin</value>
+            </list>
+        </property>
+
+        <property name="rolls">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="1" value="Oyshi"/>
+                <entry key="2" value="Taushin"/>
+                <entry key="3" value="Omi"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
